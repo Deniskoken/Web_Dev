@@ -1,0 +1,13 @@
+$kind: http-request
+method: POST
+url: http://127.0.0.1:8000/api/products/
+headers:
+  Content-Type: application/json
+body:
+  mode: raw
+  raw: |
+    {
+      "name": "PlayStation",
+      "price": 250000,
+      "category": 1
+    }

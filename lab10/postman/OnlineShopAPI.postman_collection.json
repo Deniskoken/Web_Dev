@@ -1,0 +1,125 @@
+{
+    "info": {
+      "name": "Online Shop API",
+      "_postman_id": "lab9-collection",
+      "description": "DRF Online Shop API collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Categories",
+        "item": [
+          {
+            "name": "Get All Categories",
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8000/api/categories/"
+            }
+          },
+          {
+            "name": "Get Category by ID",
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8000/api/categories/1/"
+            }
+          },
+          {
+            "name": "Get Products by Category",
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8000/api/categories/1/products/"
+            }
+          },
+          {
+            "name": "Create Category",
+            "request": {
+              "method": "POST",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Games\"\n}"
+              },
+              "url": "http://127.0.0.1:8000/api/categories/"
+            }
+          },
+          {
+            "name": "Update Category",
+            "request": {
+              "method": "PUT",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Electronics Updated\"\n}"
+              },
+              "url": "http://127.0.0.1:8000/api/categories/1/"
+            }
+          },
+          {
+            "name": "Delete Category",
+            "request": {
+              "method": "DELETE",
+              "url": "http://127.0.0.1:8000/api/categories/1/"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Products",
+        "item": [
+          {
+            "name": "Get All Products",
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8000/api/products/"
+            }
+          },
+          {
+            "name": "Get Product by ID",
+            "request": {
+              "method": "GET",
+              "url": "http://127.0.0.1:8000/api/products/1/"
+            }
+          },
+          {
+            "name": "Create Product",
+            "request": {
+              "method": "POST",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"PlayStation\",\n  \"price\": 250000,\n  \"category\": 1\n}"
+              },
+              "url": "http://127.0.0.1:8000/api/products/"
+            }
+          },
+          {
+            "name": "Update Product",
+            "request": {
+              "method": "PUT",
+              "header": [
+                { "key": "Content-Type", "value": "application/json" }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"PlayStation Updated\",\n  \"price\": 270000,\n  \"category\": 1\n}"
+              },
+              "url": "http://127.0.0.1:8000/api/products/1/"
+            }
+          },
+          {
+            "name": "Delete Product",
+            "request": {
+              "method": "DELETE",
+              "url": "http://127.0.0.1:8000/api/products/1/"
+            }
+          }
+        ]
+      }
+    ]
+  }

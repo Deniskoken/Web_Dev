@@ -1,0 +1,13 @@
+$kind: http-request
+method: PUT
+url: http://127.0.0.1:8000/api/products/1/
+headers:
+  Content-Type: application/json
+body:
+  mode: raw
+  raw: |
+    {
+      "name": "PlayStation Updated",
+      "price": 270000,
+      "category": 1
+    }
